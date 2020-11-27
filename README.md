@@ -16,3 +16,14 @@
  3. Set up all enviroments variables
  4. Execute command "mvn install"
  5. Execute command "mvn spring-boot:run" for start API
+
+# API Doc
+
+## Swagger Doc
+
+- Run API
+
+- Go to "http://<*host*>:8080/swagger-ui.html"
+
+## API Doc
+
