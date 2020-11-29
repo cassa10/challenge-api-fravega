@@ -11,7 +11,5 @@ class Horario(
         var dia:DayOfWeek,
         var apertura:LocalTime,
         var cierre:LocalTime,
-        @Id @GeneratedValue var id: Long? = null)
-{
-
-}
+        @Id @GeneratedValue var id: Long? = null
+)

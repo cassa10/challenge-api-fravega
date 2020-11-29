@@ -9,7 +9,7 @@ class Sucursal(
         ubicacion: Ubicacion,
         @ElementCollection
         var horariosDeAtencion: MutableList<Horario> = mutableListOf(),
-        var direccion: String
+        var direccion: String? = null
 ) : Nodo(nombre, ubicacion) {
 
     fun addHorario(horario:Horario) {

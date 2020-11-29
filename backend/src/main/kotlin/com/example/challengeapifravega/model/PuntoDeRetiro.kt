@@ -10,4 +10,10 @@ class PuntoDeRetiro(
         ubicacion: Ubicacion,
         var capacidad: Int
 ) : Nodo(nombre, ubicacion) {
+
+    fun update(puntoDeRetiro: PuntoDeRetiro){
+        nombre = puntoDeRetiro.nombre
+        ubicacion = puntoDeRetiro.ubicacion
+        capacidad = puntoDeRetiro.capacidad
+    }
 }
