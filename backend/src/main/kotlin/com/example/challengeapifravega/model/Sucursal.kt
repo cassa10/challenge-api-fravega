@@ -7,10 +7,11 @@ import javax.persistence.*
 class Sucursal(
         nombre:String,
         ubicacion: Ubicacion,
-        @ElementCollection
+        @OneToMany(mappedBy = "sucursal", cascade = [CascadeType.ALL], fetch = FetchType.EAGER, orphanRemoval = true)
         var horariosDeAtencion: MutableList<Horario> = mutableListOf(),
-        var direccion: String? = null
-) : Nodo(nombre, ubicacion) {
+        var direccion: String? = null,
+        id: Long? = null
+) : Nodo(nombre, ubicacion, id) {
 
     fun addHorario(horario:Horario) {
         horariosDeAtencion.add(horario)
@@ -18,5 +19,12 @@ class Sucursal(
 
     fun removeHorario(horario:Horario) {
         horariosDeAtencion.remove(horario)
+    }
+
+    fun update(sucursal: Sucursal){
+        nombre = sucursal.nombre
+        ubicacion = sucursal.ubicacion
+        horariosDeAtencion = sucursal.horariosDeAtencion
+        direccion = sucursal.direccion
     }
 }

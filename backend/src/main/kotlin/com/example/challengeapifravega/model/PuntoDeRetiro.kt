@@ -8,8 +8,9 @@ import javax.persistence.Table
 class PuntoDeRetiro(
         nombre: String,
         ubicacion: Ubicacion,
-        var capacidad: Int
-) : Nodo(nombre, ubicacion) {
+        var capacidad: Int,
+        id: Long? = null
+) : Nodo(nombre, ubicacion, id) {
 
     fun update(puntoDeRetiro: PuntoDeRetiro){
         nombre = puntoDeRetiro.nombre

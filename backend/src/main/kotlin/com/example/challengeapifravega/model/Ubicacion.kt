@@ -1,5 +1,6 @@
 package com.example.challengeapifravega.model
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.Embeddable
 
 @Embeddable

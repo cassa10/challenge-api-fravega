@@ -54,5 +54,4 @@ class PuntoDeRetiroController(@Autowired val puntoDeRetiroService: PuntoDeRetiro
         return "Punto de Retiro eliminado exitosamente"
     }
 
-
 }

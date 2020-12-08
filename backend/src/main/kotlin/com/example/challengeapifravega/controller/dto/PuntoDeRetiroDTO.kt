@@ -15,7 +15,7 @@ class PuntoDeRetiroDTO(
         @field:Min(value = 1, message = "{capacidad.min}")
         @field:Max(value = 9999999, message = "{capacidad.max}")
         val capacidad: Int,
-        val id: Long? = null
+        var id: Long? = null
 ) {
 
     @JsonIgnore
