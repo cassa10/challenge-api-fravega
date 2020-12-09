@@ -8,12 +8,18 @@
   - maven
   - postgresql
   - Docker (optional)
+  - Bash (docker)
 
 # Install and run API with Docker (Recommended)
 
 1. Clone repository
 2. CD to repository cloned
-3. 
+3. CD to backend
+4. Execute commnad:
+  >mvn clean install
+5. CD back and give execution permission to runDocker.sh
+  >chmod +x runDocker.sh
+6. Execute runDocker.sh script 
 
 # Install and run API (without Docker)
 
@@ -23,7 +29,7 @@
 
     A. Set up all enviroments variables at list.env (Recommended) 
     
-    B. Change all properties of application.properties (In case of skip 3.A)
+    B. Replace all properties of application.properties with values of list.env (In case of skip 3.A)
 
 4. Execute command "mvn install"
 5. Create database with name "challenge-api-db"
