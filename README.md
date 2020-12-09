@@ -1,4 +1,4 @@
-# Challenge - Sucursal CRUD
+# Challenge - Sucursal CRUD [![Build Status](https://travis-ci.com/cassa10/challenge-api-fravega.svg?branch=main)](https://travis-ci.com/cassa10/challenge-api-fravega)
 
 [Enunciado](https://github.com/cassa10/challenge-api-fravega/blob/main/doc/software-engineer_challenge-1.pdf)
 
