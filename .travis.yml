@@ -1,0 +1,32 @@
+language: java
+jdk:
+  - openjdk8
+
+dist: trusty
+
+sudo:
+  required
+
+env:
+  global:
+    - DB_NAME=challenge-api-db
+    - DB_USER=postgres
+    - DB_PASSWORD=postgres
+    - DB_HOST=db
+    - DB_PORT=5432
+    - SPRING_PORT=8080
+
+cache:
+  directories:
+    - $HOME/.m2
+
+before_script:
+  - cd backend
+  - psql -c 'create database "challenge-api-db";' -U postgres
+  - sudo -u postgres psql -c "ALTER ROLE postgres WITH password ''"
+
+services:
+  - postgresql
+
+notifications:
+  email: false

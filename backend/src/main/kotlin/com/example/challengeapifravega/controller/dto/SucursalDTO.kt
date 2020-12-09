@@ -11,7 +11,7 @@ class SucursalDTO(
         @field:Valid var ubicacion: UbicacionDTO,
         @field:Valid var horariosDeAtencion: List<HorarioDTO>,
         @field:Length(min = 5, max=150, message = "{direccion.size}")
-        val direccion: String? = null,
+        val direccion: String,
         var id: Long? = null
 ) {
     @JsonIgnore

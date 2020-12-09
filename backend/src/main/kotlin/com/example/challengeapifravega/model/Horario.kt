@@ -13,4 +13,10 @@ class Horario(
         @JoinColumn(name = "sucursal_id")
         var sucursal: Sucursal? = null,
         @Id @GeneratedValue var id: Long? = null
-)
+){
+        override fun equals(other: Any?): Boolean =
+                (other is Horario)
+                        && dia == other.dia
+                        && (apertura.hour == other.apertura.hour && apertura.minute == other.apertura.minute)
+                        && (cierre.hour == other.cierre.hour && cierre.minute == other.cierre.minute)
+}
